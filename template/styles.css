@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; 
+    background-image: linear-gradient(to bottom, rgb(162, 82, 73) 50%, rgb(253, 253, 253) 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    --main-color: #000000;
+    --submain-color: #78858F;
+    --bg-color: #ffdfdf;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    width: 90%; /* Adjusted width for responsiveness */
+    max-width: 47rem; /* Maximum width */
+    height: auto; /* Adjusted height to fit content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    background: var(--bg-color);
+}
+
+.card__img {
+    height: 192px;
+    width: 100%;
+}
+
+.card__img svg {
+    height: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.card__avatar {
+    position: absolute;
+    width: 114px;
+    height: 114px;
+    background-color: #ffffff;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: calc(50% - 120px);
+}
+
+.card__avatar svg {
+    width: 100px;
+    height: 100px;
+}
+
+.card__title {
+    letter-spacing: 0.2em;
+    font-size: 18px;
+    margin-top: 60px;
+    font-weight: 500;
+    color: var(--main-color);
+}
+
+.card__subtitle {
+    margin-top: 10px;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+}
+
+.card__btn {
+    margin-top: 18px;
+    width: 150px;
+    height: 35px;
+    border: 2px solid var(--main-color);
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 11px;
+    color: var(--main-color);
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+.card__btn:hover {
+    cursor: pointer;
+    background: #000;
+    color: azure;
+}
+
+.after_button, .re_link {
+    margin-top: 10px;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+}
+
+.re_link {
+    color: rgb(49, 49, 241);
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        width: 90%; /* Adjusted width for smaller screens */
+        border-radius: 10px; /* Adjusted border radius for smaller screens */
+    }
+
+    .card__title {
+        font-size: 16px; /* Adjusted font size for smaller screens */
+        margin-top: 40px; /* Adjusted margin for smaller screens */
+    }
+
+    .card__subtitle {
+        font-size: 13px; /* Adjusted font size for smaller screens */
+    }
+
+    .card__btn {
+        width: 120px; /* Adjusted button width for smaller screens */
+        height: 30px; /* Adjusted button height for smaller screens */
+        font-size: 10px; /* Adjusted font size for smaller screens */
+    }
+}
